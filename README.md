@@ -10,7 +10,7 @@ This repository contains my solutions and exercises for "The C Programming Langu
 
 ## Progress
 
-I'm currently working through the book and have completed exercises up to Chapter X.X. I will continue to update this repository as I progress further.
+I'm currently working through the book and have completed exercises up to Chapter 1.15. I will continue to update this repository as I progress further.
 
 ## Usage
 
@@ -22,4 +22,4 @@ I'm currently working through the book and have completed exercises up to Chapte
   ./hello_world.out
 
 ## NOTE
-This provides a clear and concise acknowledgment within the context of how the code is used and shared in your project.
+This project contains code adapted from "The C Programming Language" by Brian W. Kernighan and Dennis M. Ritchie (K&R). This code is used for educational purposes and is not covered by any specific license. Refer to the book for details.
