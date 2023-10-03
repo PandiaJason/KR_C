@@ -22,4 +22,4 @@ I'm currently working through the book and have completed exercises up to Chapte
   ./hello_world.out
 
 ## NOTE
-This project contains code adapted from "The C Programming Language" by Brian W. Kernighan and Dennis M. Ritchie (K&R). This code is used for educational purposes and is not covered by any specific license. Refer to the book for details.
+This project contains code adapted from "The C Programming Language" by Brian W. Kernighan and Dennis M. Ritchie (K&R). The codes are used for educational purposes and may be covered by GPL2 license by [pandiajason](https://github.com/pandiajason).
