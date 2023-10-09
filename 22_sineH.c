@@ -6,14 +6,14 @@
   use sin() func with 
   rad formula rad = degree *(PI /180.0)*/
 main(){
-  int i, j, wave;
+  int i, wave;
   double radian, result;
 
-  for (i = 0; i <= 360; i = i+12){
+  for (i = 0; i <= 360; i=i+12){
     radian = i * (PI / 180.0);
     result = sin(radian);
     wave = (int) (result * 40);
-    printf("%*c \n",39 + wave, '*');
-    }
-  printf("\n");
+    printf("%*c\n",40 + wave, '*');
+  }
+
 }
