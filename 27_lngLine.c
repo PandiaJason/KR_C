@@ -1,17 +1,16 @@
 /* print the long line amoung lines */
 #include <stdio.h>
-#define MAXSIZE 1000
+#define MAXLINE 1000
 
-int getline(char s[], int limit);
+int getline(char line[], int maxline);
 void copy(char to[], char from[]);
 
 int main(){
     int len, max;
-    char line[MAXSIZE], longest[MAXSIZE];
+    char line[MAXLINE], longest[MAXLINE];
 
     max = 0;
-
-    while ((len = getline(line,MAXSIZE)) > 0){
+    while ((len = getline(line,MAXLINE)) > 0){
         if (len > max){
             max = len;
             copy(longest,line);
@@ -24,12 +23,14 @@ int main(){
     return 0;
 }
 
+
 /* getline: read a line into s, return length */
 int getline(char s[], int lim){
-    int i,c;
-    for (i = 0; i < lim -1 && (c = getchar()) != EOF && c !='\n'; ++i){
+    int i, c;
+    for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c !='\n'; ++i){
         s[i] = c;
     }
+
     if (c == '\n'){
         s[i] = c;
         ++i;
@@ -38,13 +39,14 @@ int getline(char s[], int lim){
     s[i] = '\0';
 
     return i;
-} 
+}
 
 /* copy: copy 'from' into 'to'; assume to is big enough*/
 void copy(char to[], char from[]){
     int i;
-    i =0;
+    i = 0;
+    
     while ((to[i] = from[i]) != '\0'){
         ++i;
     }
-}
+} 
