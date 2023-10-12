@@ -19,20 +19,20 @@ int reverse(char s[])
     int i, j, c , p;
     char r[MAXSIZE];
 
-    for (i = 0; i < MAXSIZE -1 && (c = getchar()) != EOF && c != '\n' ; ++i){
+    for (i = 0; i < MAXSIZE -1 && (c = getchar()) != EOF && c != '\n' ; ++i) {
         s[i] = c;
     }
     s[i] = '\0';
 
     --i;
 
-    for (j = 0; i>=0 ; ++j){
+    for (j = 0; i >=0 ; ++j) {
         r[j] = s[i];
         --i;
     }
     r[j] = '\0';
 
-    printf("%s \n",r);
+    printf("%s \n", r);
 
     return j;
 
