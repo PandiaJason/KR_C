@@ -6,14 +6,16 @@ Use it to write a program that reverses its input a line at a time.*/
 
 int reverse(char s[]);
 
-int main(){
+int main()
+{
     char line[MAXSIZE];
     while (reverse(line) > 0);
 
     return 0;
 }
 
-int reverse(char s[]){
+int reverse(char s[])
+{
     int i, j, c , p;
     char r[MAXSIZE];
 
