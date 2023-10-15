@@ -12,7 +12,7 @@ the specified column. */
 #define FOLDSTART 59
 #define FOLDSTOP 60
 
-int foldline(void);
+int getline(void);
 char line[MAXSIZE];
 
 int main()
@@ -26,7 +26,7 @@ int main()
 
 }
 
-int foldline(void)
+int getline(void)
 {
     int i, c, fold, p, set;
     fold = set = 0;
