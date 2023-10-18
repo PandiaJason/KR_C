@@ -4,7 +4,7 @@
 */
 
 #include <stdio.h>
-#define N 17
+#define N 8
 
 void printboard(int board[N][N]);
 int checkposition(int board[N][N], int r, int c);
