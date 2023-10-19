@@ -13,6 +13,7 @@ void main()
     int board[N][N];
 
     int r, c;
+    int count = 1;
 
     for (r = 0; r < N; ++r) {
         for (c = 0;  c < N;  ++c) {
@@ -32,7 +33,7 @@ void main()
                 break;
             }
             ++c;
-        }
+        }iteration:
         if (r < N && !queen_placed) {
             for (c = 0; c < N; ++c) {
                 if (board[r-1][c] == 1) {
@@ -43,10 +44,14 @@ void main()
                 }
             }goto next_column;
         }
-
         if (r == N-1 && queen_placed) {
+            printf("count: %d \n", count);
             printboard(board);
-            break;
+            board[r][c] = 0;
+            queen_placed = 0;
+            ++c;
+            ++count;
+            goto iteration;
         }
         ++r;
 
@@ -58,13 +63,13 @@ void printboard(int board[N][N])
 {   
     
     int r, c;
-    printf("---------------------------------\n");
+    printf("_________________________________\n");
     for (r = 0; r < N; ++r) {
         for (c = 0;  c < N;  ++c) {  
         printf("|%2d ", board[r][c]);
         }
         printf("|\n");
-        printf("---------------------------------\n");
+        printf("_________________________________\n");
     }
 }
 
