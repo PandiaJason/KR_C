@@ -44,7 +44,7 @@ void main()
             }goto next_column;
         }
 
-        if (r == N-1) {
+        if (r == N-1 && queen_placed) {
             printboard(board);
             break;
         }
@@ -58,12 +58,13 @@ void printboard(int board[N][N])
 {   
     
     int r, c;
-
+    printf("---------------------------------\n");
     for (r = 0; r < N; ++r) {
         for (c = 0;  c < N;  ++c) {  
-        printf("%5d ", board[r][c]);
+        printf("|%2d ", board[r][c]);
         }
-        printf("\n");
+        printf("|\n");
+        printf("---------------------------------\n");
     }
 }
 
