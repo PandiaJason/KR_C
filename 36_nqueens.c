@@ -51,7 +51,15 @@ void main()
             queen_placed = 0;
             ++c;
             ++count;
-            goto iteration;
+            if (r < N && !queen_placed) {
+            for (c = 0; c < N; ++c) {
+                if (board[r-1][c] == 1) {
+                board[r-1][c] = 0;
+                ++c;
+                --r;
+                break;
+                }
+            }
         }
         ++r;
 
