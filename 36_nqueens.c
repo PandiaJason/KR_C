@@ -33,7 +33,7 @@ void main()
             }
             ++c;
         }
-        if (r < N && !queen_placed || c==7 && !queen_placed ) {
+        if (r < N && !queen_placed) {
             for (c = 0; c < N; ++c) {
                 if (board[r-1][c] == 1) {
                 board[r-1][c] = 0;
