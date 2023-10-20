@@ -8,13 +8,14 @@
 
 void printboard(int board[N][N]);
 int checkposition(int board[N][N], int r, int c);
+
 void main()
 {   
     int board[N][N];
 
     int r, c;
-    int count = 1;
-
+    long int count = 1;
+    int backtracked = 0;
     for (r = 0; r < N; ++r) {
         for (c = 0;  c < N;  ++c) {
             board[r][c] = 0;
@@ -22,36 +23,50 @@ void main()
     }
     r = 0;
     while(r < N) {
-        int t = r;
         int queen_placed = 0;
-        c = 0;
-        next_column:
+        if (!backtracked) {
+            c = 0;
+        }
         while (c < N) {
             if (board[r][c] == 0 && checkposition(board, r, c)) {
                 board[r][c] = 1;
                 queen_placed = 1;
+                backtracked = 0;
                 break;
             }
             ++c;
-        }iteration:
+        }
         if (r < N && !queen_placed) {
             for (c = 0; c < N; ++c) {
                 if (board[r-1][c] == 1) {
                 board[r-1][c] = 0;
+                backtracked = 1;
                 ++c;
                 --r;
                 break;
                 }
-            }goto next_column;
+            }continue;
         }
         if (r == N-1 && queen_placed) {
             printf("count: %d \n", count);
             printboard(board);
             board[r][c] = 0;
             queen_placed = 0;
-            ++c;
             ++count;
-            goto iteration;
+            ++c;
+
+            if (r < N && !queen_placed) {
+            for (c = 0; c < N; ++c) {
+                if (board[r-1][c] == 1) {
+                board[r-1][c] = 0;
+                backtracked = 1;
+                ++c;
+                --r;
+                break;
+                }
+            }continue;
+        }
+        
         }
         ++r;
 
