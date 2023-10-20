@@ -93,26 +93,26 @@ int checkposition(int board[N][N], int r, int c)
     int upright, columleft, dialeftr, diarightr, diarightclm;
 
     for (upright = r; upright >= 0; --upright) {
-        if ( board[upright][c] == 1) {
+        if (board[upright][c] == 1) {
             return 0;
         }
     }
 
     for (columleft = c; columleft >= 0; --columleft) {
-        if ( board[r][columleft] == 1) {
+        if (board[r][columleft] == 1) {
             return 0;
         }
     }
 
     for (dialeftr = r, columleft = c; dialeftr >=0 && columleft >= 0; --dialeftr,  --columleft) {
-        if ( board[dialeftr][columleft] == 1) {
+        if (board[dialeftr][columleft] == 1) {
             return 0;
         
         }
     }
 
     for (diarightr = r, diarightclm = c; diarightr >= 0 && diarightclm <= 7; --diarightr, ++diarightclm) {
-        if ( board[diarightr][diarightclm] == 1) {
+        if (board[diarightr][diarightclm] == 1) {
             return 0;
         }
     }
