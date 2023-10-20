@@ -56,16 +56,16 @@ void main()
             ++c;
 
             if (r < N && !queen_placed) {
-            for (c = 0; c < N; ++c) {
-                if (board[r-1][c] == 1) {
-                board[r-1][c] = 0;
-                backtracked = 1;
-                ++c;
-                --r;
-                break;
-                }
-            }continue;
-        }
+                for (c = 0; c < N; ++c) {
+                    if (board[r-1][c] == 1) {
+                    board[r-1][c] = 0;
+                    backtracked = 1;
+                    ++c;
+                    --r;
+                    break;
+                    }
+                }continue;
+            }
         
         }
         ++r;
