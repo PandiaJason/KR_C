@@ -7,7 +7,7 @@ void main()
     n = 10;
     int sa[n];
     for (i = 0; i < n; ++i) {
-        sa[i] = i+1;
+        sa[i] = i + 1;
     }
     binsearch(11, sa, n);
 }
