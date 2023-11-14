@@ -26,7 +26,7 @@ int binsearch(int x, int sa[], int n)
         }
 
         else if (x > sa[mid]) {
-            low = mid - 1;
+            low = mid + 1;
         }
 
         else {
