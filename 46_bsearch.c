@@ -23,11 +23,11 @@ int main()
             }
 
         else if (data[mid] < search) {
-            r = mid+1;
+            r = mid + 1;
         }
 
         else if (data[mid] > search) {
-            l = mid+1;
+            l = mid - 1;
         }
     }
     if (!found) {
