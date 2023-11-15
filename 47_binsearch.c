@@ -20,7 +20,7 @@ int binsearch(int x, int sa[], int n)
     high = n - 1;
 
     while (low <= high) {
-        mid = low + high / 2;
+        mid = (low + high) / 2;
         if (x < sa[mid]) {
             high = mid + 1;
         }
