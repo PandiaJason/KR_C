@@ -23,7 +23,7 @@ int atoi(char s[])
 {
     int i, n, sign;
 
-    for (i = 0; isspace(s[i]); ++i) /* skip 1st if that is space */
+    for (i = 0; isspace(s[i]); ++i) /* skip 1st if that isspace<true>, otherwise null */
     ;
     /* printf("%d\n", i); */
     sign = (s[i] == '-') ? -1: 1; /* set -1 for -, else 1 for +. */
