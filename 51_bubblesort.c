@@ -7,7 +7,7 @@ void main()
 {
     int i;
     int n = 6;
-    int arr[] = {1, 4, 2, 3, 5, 6};
+    int arr[] = {6, 5, 1, 4, 2, 3};
     bubblesort(arr, n);
 }
 
