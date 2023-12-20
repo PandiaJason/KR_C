@@ -23,7 +23,7 @@ void bubblesort(int v[], int n)
                 temp = v[i];
                 v[i] = v[i+1];
                 v[i+1] = temp;
-                swap = 1;
+                swap = 0;
             }
         }
     }
