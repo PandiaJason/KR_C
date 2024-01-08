@@ -32,8 +32,8 @@ double atof(char s[])
         i++;
     for (power = 1.0; s[i] >= '0' && s[i] <= '9'; ++i) {
         val = 10.0 * val + (s[i] - '0');
-        printf("power: %f \n", power);
         power *= 10;
+        printf("power: %f \n", power);
     }
 
     return sign * val / power;
