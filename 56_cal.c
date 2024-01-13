@@ -11,9 +11,13 @@ int main()
 
     sum = 0.0;
 
-    /* power of termination */
-    while (printf("line %s\n", line), (getline(line, MAXSIZE) > 0)) {
-        printf("SUM\t%g\n", sum += atof(line));
+    /* power of termination 
+    while (printf("line %s\n", line), 
+    (getline(line, MAXSIZE) > 0)) { */
+    
+    while ((getline(line, MAXSIZE) > 0)) {
+
+        printf("SUM:\t%g\n", sum += atof(line));
     }
     return 0;
 }
@@ -22,8 +26,8 @@ int getline(char s[], int lim)
 {
     int c, i;
     i = 0;
-
-    while (--lim > 0 && (c = getchar()) != EOF && c >= '0' && c <='9' && c != '\n' || c == '.' ) {
+    printf("Input: ");
+    while (--lim > 0 && (c = getchar()) != EOF && c >= '0' && c <='9' && c != '\n' || c == '.'  || c =='-' || c =='+') {
         s[i++] = c;
     }
 
