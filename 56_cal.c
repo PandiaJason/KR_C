@@ -11,7 +11,8 @@ int main()
 
     sum = 0.0;
 
-    while (getline(line, MAXSIZE) > 0) {
+    /* power of termination */
+    while (printf("line %s\n", line), (getline(line, MAXSIZE) > 0)) {
         printf("SUM\t%g\n", sum += atof(line));
     }
     return 0;
